@@ -28,6 +28,20 @@ app.post("/generate", async(req: Request, res: Response) => {
     }
 })
 
+// const response = await fetch(
+//     "http://localhost:8000/predict",
+//     {
+//         method: "POST",
+//         headers:{
+//             "Content-Type": "application/json",
+//         },
+//         body: JSON.stringify({
+//             code: generatedCode,
+//         })
+//     }
+// );
+// const result = await response.json();
+
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
 });
