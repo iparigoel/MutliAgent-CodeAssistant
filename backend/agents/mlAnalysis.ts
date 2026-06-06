@@ -1,7 +1,7 @@
-import {State, llm } from "./state";
+import { State, llm } from "./state";
 require("dotenv").config();
 
-export async function mlAnalysisNode(state: typeof State.State){
+export async function mlAnalysisNode(state: typeof State.State) {
     const response = await fetch(
         process.env.MODEL_URL!,
         {

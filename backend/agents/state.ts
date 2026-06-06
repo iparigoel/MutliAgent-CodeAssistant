@@ -7,12 +7,12 @@ const llm = new ChatOpenAI({
 });
 
 const State = Annotation.Root({
-    question: Annotation<string>(),
-    planning: Annotation<string>(),
-    coding: Annotation<string>(),
-    reviewing: Annotation<string>(),
-    mlAnalysis: Annotation<string>(),
-    testing: Annotation<string>(),
+  question: Annotation<string>(),
+  planning: Annotation<string>(),
+  coding: Annotation<string>(),
+  reviewing: Annotation<string>(),
+  mlAnalysis: Annotation<string>(),
+  testing: Annotation<string>(),
 });
 
-export {State, llm};
+export { State, llm };

@@ -1,5 +1,6 @@
-import {State, llm } from "./state";
-export async function codeNode(state: typeof State.State){
+import { State, llm } from "./state";
+
+export async function codeNode(state: typeof State.State) {
     const result = await llm.invoke(`
         Generate code for the given question and planning:
         Question:
@@ -7,7 +8,7 @@ export async function codeNode(state: typeof State.State){
         Planning:
         ${state.planning}
         `);
-        return {
-            coding: result.content,
-        }
+    return {
+        coding: result.content,
+    }
 }
