@@ -11,7 +11,7 @@ export default function Home() {
         try {
             setLoading(true);
 
-            const response = await fetch("http://localhost:5000/generate", {
+            const response = await fetch(`${process.env.BASE_URL}`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -47,12 +47,15 @@ export default function Home() {
             </button>
 
             {result && (
-                <div className="mt-8">
-                    <h1 className="text-4xl font-bold">Plan</h1>
+                <div className="mt-8 text-4xl font-bold">
+                    <h2 className="">Plan</h2>
                     <pre>{result.planning}</pre>
 
                     <h2 className="text-4xl font-bold mt-6">Code</h2>
                     <pre>{result.coding}</pre>
+
+                    <h2 className="text-4xl font-bold mt-6">ML Analysis</h2>
+                    <pre>{result.mlAnalysis}</pre>
 
                     <h2 className="text-4xl font-bold mt-6">Review</h2>
                     <pre>{result.reviewing}</pre>

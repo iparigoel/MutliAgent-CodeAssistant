@@ -11,4 +11,5 @@ def predict(data: dict):
     code = data["code"]
     features = vectorizer.transform([code])
     prediction = int(model.predict(features)[0])
-    return {"prediction": prediction}
+    prob = model.predict_proba(features)[0][1]
+    return {"bug_probability": float(prob)}

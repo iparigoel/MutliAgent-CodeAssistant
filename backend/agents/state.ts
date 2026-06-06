@@ -11,6 +11,7 @@ const State = Annotation.Root({
     planning: Annotation<string>(),
     coding: Annotation<string>(),
     reviewing: Annotation<string>(),
+    mlAnalysis: Annotation<string>(),
     testing: Annotation<string>(),
 });
 

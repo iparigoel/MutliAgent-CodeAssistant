@@ -6,6 +6,8 @@ export async function reviewNode(state: typeof State.State){
         ${state.question}
         Coding:
         ${state.coding}
+        ML Analysis:
+        ${state.mlAnalysis}
         `)
         return {
             reviewing: result.content,
