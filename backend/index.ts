@@ -2,7 +2,7 @@ require("dotenv").config();
 import express, { Request, Response } from "express";
 import cors from "cors";
 const app = express();
-const port = 5000;
+const port = Number(process.env.PORT) || 5000;
 import { graph } from "./agents/workflow";
 
 app.use(cors({
@@ -41,6 +41,6 @@ app.post("/generate", async (req: Request, res: Response) => {
     }
 })
 
-app.listen(port, () => {
+app.listen(port, "0.0.0.0", () => {
     console.log(`Example app listening on port ${port}`);
 });
